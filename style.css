@@ -1,0 +1,388 @@
+/* 1. CONFIGURAÇÕES GERAIS E VARIÁVEIS */
+:root {
+    --bg-body: #0a0f1a;
+    --bg-card: #161e2d;
+    --bg-nav: rgba(10, 15, 26, 0.8);
+    --primary: #3b82f6; /* Azul moderno */
+    --primary-hover: #2563eb;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border: #2d3748;
+    --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.bg-alt {
+    background-color: #0f172a;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/*  2. NAVBAR (GLASSMORPHISM) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--bg-nav);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.Logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.Logo span {
+    color: var(--primary);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.navbar a:hover {
+    color: var(--primary);
+}
+
+.btn-contato {
+    background: var(--primary);
+    padding: 8px 20px !important;
+    border-radius: 6px;
+    color: white !important;
+}
+
+.btn-contato:hover {
+    background: var(--primary-hover) !important;
+    transform: translateY(-2px);
+}
+
+/*  3. HERO SECTION */
+.hero {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top right, #1e293b, #0a0f1a);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-content p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.hero-btns a {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+.hero-btns a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* 4. SOBRE E QUALIFICAÇÕES (GRID CARDS) */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.sobre-texto h2 { text-align: left; }
+.sobre-texto h2::after { margin: 10px 0; }
+
+.idiomas {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.idiomas span {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--primary);
+}
+
+.resumo-qualificacoes {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.resumo-qualificacoes ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.resumo-qualificacoes li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.resumo-qualificacoes i {
+    color: var(--primary);
+    margin-top: 5px;
+}
+
+/* 5. HABILIDADES (CARDS INTERATIVOS) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+/* 6. EXPERIÊNCIA E FORMAÇÃO (TIMELINE CARDS) */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.exp-card {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.exp-card:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow);
+}
+
+.exp-card.educacao { border-left-color: #10b981; }
+
+.ano {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.85rem;
+}
+
+.exp-card.educacao .ano { color: #10b981; }
+
+.exp-card h4 { margin: 8px 0; font-size: 1.1rem; }
+.exp-card h5 { color: var(--text-muted); margin-bottom: 10px; }
+
+/* 7. PROJETOS (IMAGE CARDS) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--bg-body);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.project-img {
+    height: 200px;
+    background: linear-gradient(45deg, #1e293b, #3b82f6);
+    /* Dica: Quando tiver imagens reais, use background-image aqui */
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.tech {
+    display: block;
+    margin-top: 15px;
+    font-family: monospace;
+    color: var(--primary);
+    font-size: 0.8rem;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+
+/* 8. SERVIÇOS E FOOTER */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.service-item i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.service-item:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.service-item:hover i, .service-item:hover p {
+    color: white;
+}
+
+footer {
+    padding: 60px 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.social {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.social a:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* 9. RESPONSIVIDADE */
+@media (max-width: 992px) {
+    .sobre-grid, .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 600px) {
+    .navbar ul { display: none; } /* Simples para mobile */
+    .hero-btns { flex-direction: column; }
+}
