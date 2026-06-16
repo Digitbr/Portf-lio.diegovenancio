@@ -386,3 +386,22 @@ footer {
     .navbar ul { display: none; } /* Simples para mobile */
     .hero-btns { flex-direction: column; }
 }
+.meu projeto1{
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+.btn-veja-aqui{
+    background-color: #007BFF;
+    color: rgb(20, 120, 187);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-veja-aqui:hover{
+    background-color: #10b981;
+}
