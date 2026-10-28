@@ -1,184 +1,236 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portfólio de Diego Venancio, desenvolvedor web júnior. Projetos com JavaScript, Node.js, APIs e MySQL, formação em Sistemas de Informação e foco em soluções digitais.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Diego Venancio | Portfólio Profissional</title>
+    <title>Diego Venancio | Desenvolvedor Web Júnior</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#principal">Pular para o conteúdo</a>
     <header class="navbar">
-        <div class="Logo">DIEGO <span>.DEV</span></div>
-        <nav>
+        <a class="Logo" href="#principal" aria-label="Diego Venancio — início">dv<span>.</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">Menu <span aria-hidden="true">≡</span></button>
+        <nav id="menu-principal" aria-label="Navegação principal">
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato" class="btn-contato">Contato</a></li>
+                <li><a href="#projetos"><span class="nav-number" aria-hidden="true">01</span>Projetos</a></li>
+                <li><a href="#sobre"><span class="nav-number" aria-hidden="true">02</span>Sobre</a></li>
+                <li><a href="#habilidades"><span class="nav-number" aria-hidden="true">03</span>Habilidades</a></li>
+                <li><a href="#experiencia"><span class="nav-number" aria-hidden="true">04</span>Trajetória</a></li>
+                <li><a href="#contato" class="btn-contato">Vamos conversar <span aria-hidden="true">↗</span></a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <main id="principal">
+    <section class="hero" aria-labelledby="titulo-principal">
+        <div class="hero-layout container">
         <div class="hero-content">
-            <h1>Desenvolvendo soluções para <span>sistemas de segurança</span></h1>
-            <p>Desenvolvedor Júnior Full-Stack (Node.js & React) e especialista em otimização de processos operacionais.</p>
+            <p class="handnote">Código com propósito.</p>
+            <h1 id="titulo-principal">Olá, sou<br>Diego <span>Venancio.</span></h1>
+            <p class="eyebrow">Desenvolvedor web júnior</p>
+            <p class="hero-description">Transformo necessidades do dia a dia em soluções digitais. Tenho prática em JavaScript, Node.js, Express e MySQL e busco minha próxima oportunidade em desenvolvimento.</p>
             <div class="hero-btns">
-                <a href="#projetos" class="btn-primary">Ver Projetos</a>
-                <a href="./diego26.pdf" class="btn-secondary" download>Baixar CV</a>
+                <a href="#projetos" class="btn-primary">Conheça meus projetos <span aria-hidden="true">↗</span></a>
+                <a href="./diego26.pdf" class="btn-secondary" download>Baixar currículo <span aria-hidden="true">↓</span></a>
             </div>
+            <p class="hero-meta"><span class="status-dot" aria-hidden="true"></span>Em busca de uma oportunidade júnior · Vila Velha/ES</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+            <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+            <div class="art-speckles"></div>
+            <div class="art-slab slab-coral"></div><div class="art-slab slab-yellow"></div>
+            <div class="developer-tile"><span class="tile-label">DESENVOLVIMENTO WEB</span><strong>dv<span>.</span></strong><span class="tile-caption">ideia → código → solução</span></div>
+            <span class="floating-tag tag-js">JavaScript</span><span class="floating-tag tag-node">Node.js</span><span class="floating-tag tag-sql">MySQL</span>
+            <span class="art-cross">+</span><span class="art-triangle"></span>
+        </div>
+        </div>
+        <a class="scroll-cue" href="#projetos">Explore meu trabalho <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section id="projetos" class="projects-section">
+        <div class="container">
+            <div class="section-heading"><div><p class="handnote">Da necessidade à prática.</p><h2>Projetos com<br>contexto real.</h2></div><p class="section-intro">Soluções para organizar rotinas, acompanhar atividades e transformar informações em ferramentas úteis.</p></div>
+            <div class="projects-grid">
+                <article class="project-card project-fiscaliza">
+                    <div class="project-img project-cover" aria-hidden="true"><span class="cover-kicker">OPERAÇÕES / REGISTROS</span><i class="fas fa-clipboard-check"></i><span class="cover-title">Fiscalização<br>de campo<span class="cover-dot">.</span></span><span class="cover-lines"></span></div>
+                    <div class="project-info">
+                        <span class="project-category">01 / Sistema operacional</span>
+                        <h3>Fiscalização de Campo</h3>
+                        <p>Registro de rondas e organização das informações de fiscalização operacional.</p>
+                        <p class="project-detail"><strong>Minha participação:</strong> desenvolvimento com JavaScript, TypeScript, Node.js e Express.</p>
+                        <p class="project-detail"><strong>No repositório:</strong> registros operacionais, exportação de relatórios e documentação da camada de dados com MySQL e Prisma.</p>
+                        <span class="tech">Tecnologias do repositório: Next.js · Node.js · MySQL · Prisma</span>
+                        <div class="project-links"><a href="https://github.com/Digitbr/fiscaliza-engie" class="btn-project" target="_blank" rel="noopener noreferrer">Ver código <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+                    </div>
+                </article>
+                <article class="project-card project-frotas">
+                    <div class="project-img screenshot-cover"><img src="prime-frotas.png" alt="Captura da interface da demonstração Prime Frotas" loading="lazy"></div>
+                    <div class="project-info">
+                        <span class="project-category">02 / Demonstração interativa</span>
+                        <h3>Prime Frotas</h3>
+                        <p>Demonstração de gestão de frota com listas de verificação, custos, relatórios e controle de quilometragem por escala.</p>
+                        <p class="project-detail"><strong>Explore:</strong> a interface e os fluxos de acompanhamento da frota nesta demonstração independente.</p>
+                        <span class="tech">HTML · CSS · JavaScript</span>
+                        <div class="project-links">
+                            <a href="https://demoprimefrotas.vercel.app/" class="btn-project" target="_blank" rel="noopener noreferrer">Abrir demonstração <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="https://github.com/Digitbr/demoprimefrotas" class="code-link" target="_blank" rel="noopener noreferrer">Ver código</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card project-avaliar">
+                    <div class="project-img project-cover" aria-hidden="true"><span class="cover-kicker">PESSOAS / DESEMPENHO</span><i class="fas fa-chart-line"></i><span class="cover-title">Avaliação &amp;<br>qualidade<span class="cover-dot">.</span></span><span class="cover-lines"></span></div>
+                    <div class="project-info">
+                        <span class="project-category">03 / Avaliação de colaboradores</span>
+                        <h3>Avaliaragos</h3>
+                        <p>Sistema para avaliar o desempenho e a qualidade do trabalho de colaboradores.</p>
+                        <p class="project-detail"><strong>Minha participação:</strong> desenvolvimento com JavaScript, TypeScript, Node.js e Express.</p>
+                        <span class="tech">JavaScript · TypeScript · Node.js · Express</span>
+                        <p class="project-status"><span aria-hidden="true">○</span> Sem link público disponível no portfólio.</p>
+                    </div>
+                </article>
+            </div>
+            <a class="all-projects" href="https://github.com/Digitbr" target="_blank" rel="noopener noreferrer">Mais código no meu GitHub <span aria-hidden="true">↗</span></a>
         </div>
     </section>
 
     <section id="sobre" class="container">
         <div class="sobre-grid">
             <div class="sobre-texto">
-                <h2>Sobre Mim</h2>
+                <p class="handnote">Além do código.</p>
+                <h2>Uma visão prática<br>para criar soluções.</h2>
                 <p>
-                    <strong>Diego Venancio</strong> é um desenvolvedor de sistemas em formação, focado em evolução constante e entrega de soluções tecnológicas. Atualmente residente em <strong>Vila Velha/ES</strong>, combina proficiência técnica com uma visão analítica apurada para otimização de processos.
+                    Sou estudante de <strong>Sistemas de Informação na UVV</strong>, em Vila Velha, no Espírito Santo. Minha experiência administrativa e operacional me ajuda a reconhecer problemas que podem ser resolvidos com software: organizar informações, registrar atividades e acompanhar processos.
                 </p>
+                <p class="about-followup">Uso a programação para desenvolver ferramentas ligadas a essas necessidades. Quero contribuir com uma equipe de desenvolvimento, aprender com outros profissionais e aprimorar a qualidade das minhas entregas.</p>
                 <div class="idiomas">
-                    <span><i class="fas fa-globe"></i> Português (Nativo)</span>
-                    <span><i class="fas fa-language"></i> Inglês (Intermediário - B2)</span>
-                    <span><i class="fas fa-comment"></i> Espanhol (Básico)</span>
+                    <span>Português · nativo</span>
+                    <span>Inglês · intermediário (B2)</span>
+                    <span>Espanhol · básico</span>
                 </div>
             </div>
-            
+
             <div class="resumo-qualificacoes">
-                <h3>Qualificações Chave</h3>
+                <h3>O que levo para a equipe</h3>
                 <ul>
-                    <li><i class="fas fa-check-circle"></i> <strong>Desenvolvimento e BI:</strong> Sistemas internos, MySQL e Power BI.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Infraestrutura:</strong> Domínio de Microsoft 365 e processos operacionais.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Soft Skills:</strong> Comunicação assertiva e foco em qualidade.</li>
+                    <li><span class="qualification-number" aria-hidden="true">01</span><span><strong>Desenvolvimento aplicado</strong>Prática com aplicações web, APIs e bancos de dados relacionais.</span></li>
+                    <li><span class="qualification-number" aria-hidden="true">02</span><span><strong>Visão de processos</strong>Experiência com necessidades operacionais e organização de dados.</span></li>
+                    <li><span class="qualification-number" aria-hidden="true">03</span><span><strong>Vontade de evoluir</strong>Interesse em resolver problemas, colaborar e aprender com a equipe.</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="habilidades" class="bg-alt">
+    <section id="habilidades" class="skills-section">
         <div class="container">
-            <h2>Habilidades Técnicas</h2>
+            <div class="section-heading"><div><p class="handnote">Minha caixa de ferramentas.</p><h2>O que já uso.<br>O que quero aprender.</h2></div><p class="section-intro">Conhecimentos aplicados em projetos e próximos passos para continuar evoluindo.</p></div>
             <div class="skills-grid">
                 <div class="skill-card">
                     <i class="fas fa-code"></i>
                     <h3>Front-end</h3>
-                    <p>React, Next.js e CSS Moderno (Flexbox/Grid).</p>
+                    <p>HTML, CSS e JavaScript.</p>
+                    <span class="skill-level">Uso prático</span>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-server"></i>
                     <h3>Back-end</h3>
-                    <p>Node.js, MySQL e CodeIgniter 4.</p>
+                    <p>Node.js, Express, PHP, CodeIgniter e APIs.</p>
+                    <span class="skill-level">Uso prático</span>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-project-diagram"></i>
-                    <h3>Sistemas</h3>
-                    <p>Análise de Requisitos e Modelagem de Dados.</p>
+                    <h3>Dados</h3>
+                    <p>SQL e MySQL.</p>
+                    <span class="skill-level">Uso prático</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-microchip"></i>
-                    <h3>Hardware</h3>
-                    <p>Manutenção e Otimização de Sistemas.</p>
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Versionamento</h3>
+                    <p>Git e GitHub.</p>
+                    <span class="skill-level">Conhecimentos básicos</span>
                 </div>
+            </div>
+            <div class="learning-note">
+                <p><strong>Também tenho prática com</strong> TypeScript em projetos de sistemas e Python.</p>
+                <p><strong>Na minha trilha de aprendizagem</strong> React, Vite, MongoDB e estruturas de dados, além do aprofundamento em APIs REST e Git.</p>
             </div>
         </div>
     </section>
 
     <section id="experiencia" class="container">
+        <p class="handnote">Minha trajetória.</p>
+        <h2>Experiência que amplia<br>meu olhar para a tecnologia.</h2>
         <div class="timeline-grid">
             <div class="coluna">
-                <h2>Experiência Profissional</h2>
+                <h3 class="column-title">Experiência profissional</h3>
                 <div class="exp-card">
-                    <span class="ano">2025 – Atual</span>
+                    <span class="ano">2025 — atual</span>
                     <h4>Auxiliar Administrativo Operacional</h4>
                     <h5>Argosvig Segurança</h5>
-                    <p>Suporte a supervisores, análise de ponto eletrônico e desenvolvimento de sistemas de BI.</p>
+                    <p>Suporte a supervisores, análise de ponto eletrônico, tratamento de dados e criação de sistemas e dashboards para processos internos.</p>
+                    <p class="project-detail">Contato com as necessidades de quem utiliza os sistemas no dia a dia.</p>
                 </div>
                 <div class="exp-card">
                     <span class="ano">2024 – 2025</span>
                     <h4>Operador de Caixa</h4>
                     <h5>Casas Franklin</h5>
-                    <p>Atendimento ao público e gestão de fluxo de caixa.</p>
+                    <p>Atendimento ao público e gestão do fluxo de caixa, com atenção aos registros e à comunicação com os clientes.</p>
                 </div>
                 <div class="exp-card">
                     <span class="ano">2023 – 2024</span>
                     <h4>Auxiliar de Produção</h4>
                     <h5>Chocolates Garoto</h5>
-                    <p>Atuação em setores produtivos sob normas rigorosas de qualidade.</p>
+                    <p>Atuação em setores produtivos sob normas de qualidade, com foco em organização e cumprimento de procedimentos.</p>
                 </div>
             </div>
 
             <div class="coluna">
-                <h2>Formação Acadêmica</h2>
+                <h3 class="column-title">Formação acadêmica</h3>
                 <div class="exp-card educacao">
-                    <span class="ano">Previsão 2028</span>
+                    <span class="ano">Conclusão prevista para 2028</span>
                     <h4>Sistemas de Informação</h4>
                     <h5>Universidade de Vila Velha (UVV)</h5>
                     <p>Graduação focada em tecnologia e gestão.</p>
                 </div>
                 <div class="exp-card educacao">
-                    <span class="ano">Concluído 2025</span>
-                    <h4>Técnico em Programação Web</h4>
-                    <h5>Instituto Federal do RS (IFRS)</h5>
-                    <p>Especialização técnica em desenvolvimento web completo.</p>
+                    <span class="ano">Concluído em 2025</span>
+                    <h4>Programador Web</h4>
+                    <h5>Instituto Federal do Rio Grande do Sul (IFRS)</h5>
+                    <p>Formação complementar em programação web.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projetos" class="bg-alt">
-        <div class="container">
-            <h2>Projetos em Destaque</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-img" style="background: url('prime-frotas.png') top center / cover no-repeat;"></div>
-                    <div class="project-info">
-                        <h3>Fiscalização de Campo</h3>
-                        <p>Plataforma para monitoramento de rondas e supervisão da Argosvig.</p>
-                        <span class="tech">Next.js • Node.js • UI/UX</span>
-                        <article class="meu-projeto1">
-                        <button type="button" class="btn-veja-aqui"><a href="https://demoprimefrotas.vercel.app/" target="_blank">Ver projeto</button></a>
-                        </article>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <div class="project-img"></div>
-                    <div class="project-info">
-                        <h3>Avaliaragos</h3>
-                        <p>Sistema de avaliação de desempenho e qualidade para colaboradores.</p>
-                        <span class="tech">JS • MySQL</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
 
-    <section id="servicos" class="container">
-        <h2>Serviços de TI</h2>
-        <div class="services-list">
-            <div class="service-item">
-                <i class="fas fa-desktop"></i>
-                <h4>Formatação e Instalação</h4>
-                <p>Windows 7 ao 11 e Pacote Office.</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-laptop-code"></i>
-                <h4>Sistemas Web</h4>
-                <p>Criação de dashboards e ferramentas internas personalizadas.</p>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <footer id="contato">
-        <p>&copy; 2026 Diego Venancio. Todos os direitos reservados.</p>
-        <div class="social">
-            <a href="https://www.linkedin.com/in/diego-venancio-bb1600268" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
-            <a href="https://www.instagram.com/diegovdlm" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://github.com/seu-github" target="_blank"><i class="fab fa-github"></i> Github</a>
-            <a href="https://wa.me/5527993111872" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+        <div class="container contact-layout">
+        <div>
+            <p class="handnote">Vamos construir juntos?</p>
+            <h2>Sua equipe pode ser<br>meu próximo capítulo<span>.</span></h2>
+            <p class="contact-description">Busco uma oportunidade júnior para contribuir com soluções digitais e crescer junto com uma equipe de desenvolvimento.</p>
+            <a class="btn-primary" href="mailto:diegovenancio2005@gmail.com">Entre em contato <span aria-hidden="true">↗</span></a>
         </div>
+        <div class="contact-details">
+            <span class="contact-label">E-mail</span>
+            <a class="contact-email" href="mailto:diegovenancio2005@gmail.com">diegovenancio2005@gmail.com</a>
+            <p class="contact-location">Vila Velha/ES<br>Interesse em trabalho remoto</p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/diego-venancio-bb1600268" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/Digitbr" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="https://wa.me/5527993111872" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom container"><a class="Logo" href="#principal" aria-label="Voltar ao início">dv<span>.</span></a><p>&copy; <span id="ano">2026</span> Diego Venancio. Todos os direitos reservados.</p><a href="#principal">Voltar ao início <span aria-hidden="true">↑</span></a></div>
     </footer>
 </body>
 </html>
